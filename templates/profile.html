@@ -1,0 +1,156 @@
+{% include 'index/head.html' %}
+{% load static %}
+
+<div class="container p-0 md:px-6 pb-20 lg:px-8 min-h-screen">
+  <div class="block">
+    <div class="relative">
+      <div class="bg-background">
+        <div class="grid md:grid-cols-12">
+   
+          <div class="md:sticky fixed bottom-0 md:top-0 md:block bg-white z-20 w-full col-span-12 md:col-span-4 lg:col-span-2 left-0 h-auto md:max-h-screen">
+            <div class="space-y-4 md:py-4 sticky z-50 md:top-[85px]">
+              <div class="p-4 md:p-0">
+                <h2 class="hidden mb-1 text-base font-semibold tracking-tight md:inline-block"> Discover </h2>
+                <div class="flex justify-between gap-4 md:-ml-2 md:block">
+                  
+             
+                  <a href="/" class="w-full">
+                    <button class="inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-4 w-full justify-center md:justify-start gap-2 py-1 !text-sm !px-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z"></path>
+                      </svg>
+                      <span class="hidden md:inline-block">Home</span>
+                    </button>
+                  </a>
+                  
+                  
+                  <a href="/users" class="w-full">
+                    <button class="inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-4 py-2 w-full justify-center md:justify-start gap-2 !text-sm !px-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"></path>
+                      </svg>
+                      <span class="hidden md:inline-block">Unicrafters</span>
+                    </button>
+                  </a>
+                  
+                  
+                  <a href="/universities" class="w-full">
+                    <button class="inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-4 py-2 w-full justify-center md:justify-start gap-2 !text-sm !px-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z"></path>
+                      </svg>
+                      <span class="hidden md:inline-block">Universities</span>
+                    </button>
+                  </a>
+                  
+                  
+                  <a href="/scholarships" class="hidden w-full md:block">
+                    <button class="inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-4 py-2 w-full justify-center md:justify-start gap-2 !text-sm !px-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" size="20" class="lucide lucide-hand-coins-icon">
+                        <path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"></path>
+                        <path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"></path>
+                        <path d="m2 16 6 6"></path>
+                        <circle cx="16" cy="9" r="2.9"></circle>
+                        <circle cx="6" cy="5" r="3"></circle>
+                      </svg>
+                      <span class="hidden md:inline-block">Scholarships</span>
+                    </button>
+                  </a>
+                  
+               
+                  <a href="/roadmaps" class="block w-full md:hidden">
+                    <button class="inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50 h-10 px-4 py-2 w-full justify-center md:justify-start gap-2 !text-sm !px-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 15h3v3H3zm0-7h3v3H3zm7 7h3v3h-3zm0-7h3v3h-3zm7 7h3v3h-3zm0-7h3v3h-3z"></path>
+                      </svg>
+                      <span class="hidden md:inline-block">Roadmaps</span>
+                    </button>
+                  </a>
+                </div>
+              </div>
+              
+              
+              <div class="py-2">
+                <div id="loading-indicator" class="absolute inset-0 flex items-center justify-center w-full h-full bg-white rounded-xl dark:bg-slate-900 z-50" style="display: none;">
+                  <div class="animate-pulse rounded-full w-10 h-10 border-t-2 border-slate-900 border-t-transparent dark:border-t-slate-100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+         
+          <div class="md:col-span-8 lg:col-span-10">
+            <div class="relative w-full">
+           
+              <section id="profile" class="w-full space-y-6">
+                <div class="flex flex-col md:flex-row items-center gap-4 p-4 md:p-6">
+                  
+                  <div class="flex-shrink-0">
+                    <img src="{% static 'images/user.jpg' %}"  class="w-32 h-32 rounded-full border-2 border-slate-900 dark:border-slate-100">
+                  </div>
+              
+                  <div class="flex flex-col">
+                    <h1 class="text-2xl font-bold">{{request.user.first_name}}</h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-400">Student | Developer</p>
+                  </div>
+                </div>
+                
+                
+                <div class="mb-4 px-4">
+                  <!-- Header Section -->
+                  <div class="py-2 flex items-center justify-between">
+                    <h2 class="text-xl font-medium text-black">Certificates</h2>
+                    <button type="button" aria-haspopup="dialog" aria-expanded="false" data-state="closed">
+                      <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 bg-slate-900 text-slate-50 hover:bg-slate-900/90 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/90 h-10 px-4 py-2">
+                        <a href="{% url 'create' %}">Add</a>
+                      </button>
+                    </button>
+                  </div>
+                  
+                  <div>
+                    {% if certificates %}
+                      {% for i in certificates %}
+                        <div class="flex flex-col gap-6">
+                          <div class="flex items-center gap-6 p-6 relative rounded-md border border-gray-200 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+                           
+                            <!--
+                            <div class="w-14 h-12 lg:w-16 lg:h-16 border p-1 rounded overflow-hidden">
+                              <img class="w-full h-full object-contain object-center" src="/icons/university.webp" alt="specialized of IT logo">
+                            </div>
+                            -->
+                            
+                            <ul class="flex flex-col flex-grow">
+                              <li class="lg:text-lg text-base font-semibold text-gray-800 pr-10">
+                                <a href="/universities/specialized-of-it" class="hover:underline">{{i.name}}</a>
+                              </li>
+                              <li class="text-sm lg:text-base text-gray-600">{{i.score}}</li>
+                            </ul>
+                            
+                            <div class="flex gap-2 absolute right-4 top-4">
+                              <button type="button" class="border p-2 rounded bg-red-500 text-white shadow hover:bg-red-600 transition duration-150 ease-in-out">
+                                <a href="{% url 'delete' i.id %}" class="text-white">Delete</a>
+                              </button>
+                              <button type="button" class="border p-2 rounded bg-blue-500 text-green shadow hover:bg-blue-600 transition duration-150 ease-in-out">
+                                <a href="{% url 'update' i.id %}" class="text-green">Update</a>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      {% endfor %}
+                    {% else %}
+                     
+                      <div class="lg:text-lg font-medium text-black text-center pb-4 grid place-items-center"><svg viewBox="0 0 512 512" width="116" height="116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" class="w-16 h-16"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>about</title><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="about-white" fill="#000000" transform="translate(42.666667, 42.666667)"><path d="M213.333333,3.55271368e-14 C95.51296,3.55271368e-14 3.55271368e-14,95.51168 3.55271368e-14,213.333333 C3.55271368e-14,331.153707 95.51296,426.666667 213.333333,426.666667 C331.154987,426.666667 426.666667,331.153707 426.666667,213.333333 C426.666667,95.51168 331.154987,3.55271368e-14 213.333333,3.55271368e-14 Z M213.333333,384 C119.227947,384 42.6666667,307.43872 42.6666667,213.333333 C42.6666667,119.227947 119.227947,42.6666667 213.333333,42.6666667 C307.44,42.6666667 384,119.227947 384,213.333333 C384,307.43872 307.44,384 213.333333,384 Z M240.04672,128 C240.04672,143.46752 228.785067,154.666667 213.55008,154.666667 C197.698773,154.666667 186.713387,143.46752 186.713387,127.704107 C186.713387,112.5536 197.99616,101.333333 213.55008,101.333333 C228.785067,101.333333 240.04672,112.5536 240.04672,128 Z M192.04672,192 L234.713387,192 L234.713387,320 L192.04672,320 L192.04672,192 Z" id="Shape"></path></g></g></g></svg><h2 class="text-lg from-black mt-4 font-medium"> Please, fill in your certificates. </h2></div>
+                    {% endif %}
+                  </div>
+                  
+                
+                
+              </section>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
