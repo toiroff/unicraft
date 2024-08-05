@@ -106,33 +106,43 @@
                       </button>
                     </button>
                   </div>
-                  
+
                   <div>
-                    {% if certificates %}
-                      {% for i in certificates %}
+                    {% if certificate_subjects %}
+                      {% for certificate_type, user_subjects in certificate_subjects.items %}
                         <div class="flex flex-col gap-6">
                           <div class="flex items-center gap-6 p-6 relative rounded-md border border-gray-200 bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-                           
-                            <!--
-                            <div class="w-14 h-12 lg:w-16 lg:h-16 border p-1 rounded overflow-hidden">
-                              <img class="w-full h-full object-contain object-center" src="/icons/university.webp" alt="specialized of IT logo">
-                            </div>
-                            -->
-                            
+                                            
                             <ul class="flex flex-col flex-grow">
                               <li class="lg:text-lg text-base font-semibold text-gray-800 pr-10">
-                                <a href="/universities/specialized-of-it" class="hover:underline">{{i.name}}</a>
+                                  <a href="/universities/specialized-of-it" class="hover:underline">{{ certificate_type.name }}</a>
                               </li>
-                              <li class="text-sm lg:text-base text-gray-600">{{i.score}}</li>
-                            </ul>
-                            
-                            <div class="flex gap-2 absolute right-4 top-4">
-                              <button type="button" class="border p-2 rounded bg-red-500 text-white shadow hover:bg-red-600 transition duration-150 ease-in-out">
-                                <a href="{% url 'delete' i.id %}" class="text-white">Delete</a>
-                              </button>
-                              <button type="button" class="border p-2 rounded bg-blue-500 text-green shadow hover:bg-blue-600 transition duration-150 ease-in-out">
-                                <a href="{% url 'update' i.id %}" class="text-green">Update</a>
-                              </button>
+                              {% for user_subject in user_subjects %}
+                                  <li class="text-sm lg:text-base text-gray-600 flex items-center justify-between">
+                                      <div>
+                                          <b>{{ user_subject.subject.name }}</b> Score: {{ user_subject.score }}
+                                      </div>
+                              
+                                  </li>
+                              {% empty %}
+                                  <li>No subjects found.</li>
+                              {% endfor %}
+                              <div class="flex gap-2 mt-4 absolute right-4 top-4">
+                              
+                                <a href="{% url 'delete' certificate_type.id %}" class="border p-2 rounded bg-red-500 text-white shadow hover:bg-red-600 transition duration-150 ease-in-out">
+                                    Delete
+                                </a>
+
+                                <a href="{% url 'create' %}" class="border p-2 rounded bg-blue-500 text-green shadow hover:bg-blue-600 transition duration-150 ease-in-out">
+                                  Update
+                              </a>
+                              
+                            </div>
+                             
+                           
+                          </ul>
+                          
+                          
                             </div>
                           </div>
                         </div>
@@ -142,7 +152,9 @@
                       <div class="lg:text-lg font-medium text-black text-center pb-4 grid place-items-center"><svg viewBox="0 0 512 512" width="116" height="116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" class="w-16 h-16"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>about</title><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="about-white" fill="#000000" transform="translate(42.666667, 42.666667)"><path d="M213.333333,3.55271368e-14 C95.51296,3.55271368e-14 3.55271368e-14,95.51168 3.55271368e-14,213.333333 C3.55271368e-14,331.153707 95.51296,426.666667 213.333333,426.666667 C331.154987,426.666667 426.666667,331.153707 426.666667,213.333333 C426.666667,95.51168 331.154987,3.55271368e-14 213.333333,3.55271368e-14 Z M213.333333,384 C119.227947,384 42.6666667,307.43872 42.6666667,213.333333 C42.6666667,119.227947 119.227947,42.6666667 213.333333,42.6666667 C307.44,42.6666667 384,119.227947 384,213.333333 C384,307.43872 307.44,384 213.333333,384 Z M240.04672,128 C240.04672,143.46752 228.785067,154.666667 213.55008,154.666667 C197.698773,154.666667 186.713387,143.46752 186.713387,127.704107 C186.713387,112.5536 197.99616,101.333333 213.55008,101.333333 C228.785067,101.333333 240.04672,112.5536 240.04672,128 Z M192.04672,192 L234.713387,192 L234.713387,320 L192.04672,320 L192.04672,192 Z" id="Shape"></path></g></g></g></svg><h2 class="text-lg from-black mt-4 font-medium"> Please, fill in your certificates. </h2></div>
                     {% endif %}
                   </div>
-                  
+
+            
+                
                 
                 
               </section>

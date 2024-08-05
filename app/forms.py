@@ -1,17 +1,18 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from .models import *
 from django.contrib.auth.models import User
-from .models import Certificates
+from django.contrib.auth.forms import UserCreationForm
 
 
-class UserCreationForm(UserCreationForm):
+class CustomUserCreationForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ['username', 'first_name', 'password1', 'password2']
+        fields = ('username', 'password1', 'password2')
 
+from django import forms
+from .models import Subject
 
-class CertificatesForm(forms.ModelForm):
+class SubjectForm(forms.ModelForm):
     class Meta:
-        model = Certificates
-        fields = '__all__'
-        exclude = ['user']
+        model = Subject
+        fields = ['certificate_type','name'] 
